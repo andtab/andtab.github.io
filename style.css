@@ -1,0 +1,60 @@
+header {
+	color: red;	
+	background: green;
+	background-repeat: repeat;
+}
+
+body {
+	background-image: url("./images/index-background/Website-Stars-Texture0000.png"),url(./images/index-background/Website-Far-Stars-Texture0000.png);
+	background-repeat: repeat,repeat;
+	background-color: black;
+
+	
+}
+
+
+a:link, a:active, a:hover {
+	text-decoration: none;
+	background-image:
+		linear-gradient(
+			to right,
+			red, #f06d06
+		);
+	text-align: center;
+	padding: 14px 14px;
+	text-transform: uppercase;
+	border: 8px solid rgba(28,110,164,0.58);
+	font-weight: bold;
+	font-style: italic;
+	color: black;
+	background-color: transparent;
+}
+
+
+nav li {
+		display: inline-block;
+		margin-left: 35px;
+		align: center;
+	
+}
+
+
+
+.container {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 15px;
+    width: 960px;
+	background-repeat: repeat-x;
+}
+
+
+
+
+
+
+
+
+
+
+
