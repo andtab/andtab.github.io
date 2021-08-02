@@ -1,51 +1,236 @@
-header {
-	color: red;	
-	background: green;
-	background-repeat: repeat;
+body{
+	
+	
+background: linear-gradient(rgba(0,0,255,0.7) 0%, rgba(230,0,255,1) 80%) repeat-x, 
+
+url("Image1_Animated_Alpha.gif"),
+
+black;
+
+min-height: 100vh;
+background-size: 10vh;
+
 }
 
-body {
-	background-image: url("./images/index-background/Website-Stars-Texture0000.png"),url(./images/index-background/Website-Far-Stars-Texture0000.png);
-	background-repeat: repeat,repeat;
-	background-color: black;
+
+.title{
+	font-family: Pacifico;
+	font-size: 72px;
+
+  color: #ff2400;
+ 
+  text-shadow:
+
+    0 0 40px #f0584d;
+    0 0 20px #f0584d;
+	0 0 20px #f0584d;
+	0 0 28px #f0584d;
+
+   	margin: 0px;
+	padding: 0px;
+	/* float: left; */
+	/* white-space: nowrap; */
+ 
+
+}
+
+
+.gradient-text {
+    background-color: #f3ec78;
+    background-image: linear-gradient(rgba(0,0,255,0.7) 0%, rgba(230,0,255,1) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+	
+/* 	margin: 0px;
+	padding: 0px; */
+	
+	
+}
+
+
+
+hr {
+
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 100vh;
+	background-repeat: repeat-x;
+	width: 1300px;
+
+	margin-left: 6px;
+	margin-right: 2px;
+	border-radius: 6px;
+	border-top: 6px solid;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	display: block;
+	margin-top:10px;
+
+
+	overflow-x: visible;
+    color: #fff; 
+    background-color: none;
+}
+
+
+
+
+header {
+	
+/* 	background: #55d6aa;
+	min-width: 1440px;
+	margin: 0px; */
+	margin: 0px;
+
+	height: 100px;
+
+	
+}
+
+header::after {
+	content: '';
+	display: table;
+	clear: both;
+	min-width: 1440px;
+
+}
+
+
+
+
+
+
+
+.logo {
+	font-family: Pacifico;
+	font-size: 72px;
+	background-color: #f3ec78;
+    background-image: linear-gradient(rgba(0,0,255,0.7) 0%, rgba(230,0,255,1) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+	  text-shadow:
+	
+
+    0 0 40px #f0584d;
+    0 0 20px #f0584d;
+	0 0 20px #f0584d;
+	0 0 28px #f0584d;
+	
+
+
+	display: inline-block;
+	margin-bottom: 10px;
+	white-space: nowrap;
+	position: absolute;
+	float: left;
+	
+	
+	margin-top: 0px;
+	padding-right: 100px;
+
+	
+	
+}
+
+nav {
+	
+	
+/* 	display: inline-block;
+	white-space: nowrap;
+	margin-bottom: 50px;
+	text-align: right; */
+	
+/* 
+	white-space: nowrap;
+	display: inline-block;
+	text-align: right; */
+	white-space: no-wrap;
 
 	
 }
 
 
-a:link, a:active, a:hover {
-	text-decoration: none;
-	background-image:
-		linear-gradient(
-			to right,
-			red, #f06d06
-		);
-	text-align: center;
-	padding: 14px 14px;
-	text-transform: uppercase;
-	border: 8px solid rgba(28,110,164,0.58);
-	font-weight: bold;
-	font-style: italic;
-	color: black;
-	background-color: transparent;
-}
+nav ul {
+font-family: Jost;
 
+	min-width: 1500px;
+	margin-top: 50px;
+	position: absolute;
+	left: 450px;
+
+
+
+	font-family: Jost;
+	
+
+
+}
 
 nav li {
-		display: inline-block;
-		margin-left: 35px;
-		align: center;
+	display: inline-block;
+    position: relative;
+
+    padding: 5px 25px;
+    border: none;
+   background-position: 0 0;
+
+
+
+}
+
+nav li:before {
+background: none;
 	
 }
 
 
+nav li:hover {
+	 color: #fff;
+background-position: 0 0;
+    background-image: linear-gradient(rgba(248,127,115,0.7) 0%, rgba(248,127,115,1) 100%);
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
 
-.container {
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 0 15px;
-    width: 960px;
-	background-repeat: repeat-x;
+
+
+nav li:hover:before {
+       width: 100%;
+    color: #fff;
+	background: none;
+background-position: 0 0;
+}
+
+
+
+
+
+nav a {
+	color: black;
+	text-decoration: none;
+
+	
+
+}
+
+
+nav a:hover:before {
+
+	color: black;
+}
+
+
+nav a:hover {
+
+	color: black;
 }
 
 
@@ -54,6 +239,11 @@ nav li {
 
 
 
+
+
+
+
+/*http://jsfiddle.net/187wghru/*/
 
 
 
