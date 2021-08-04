@@ -1,7 +1,7 @@
 body{
 	
 	
-background: linear-gradient(rgba(0,0,255,0.7) 0%, rgba(230,0,255,1) 80%) repeat-x, 
+background: linear-gradient(rgba(0,0,255,0.7) 0%, rgba(230,0,255,1) 80%) repeat-x fixed, 
 
 url("Image1_Animated_Alpha.gif"),
 
@@ -9,12 +9,22 @@ black;
 
 min-height: 100vh;
 background-size: 10vh;
+cursor: url("Cursor.png"), default;	
 
+
+margin: 0; 
+height: 100%; 
+overflow: hidden
+
+}
+
+.test {
+cursor: url("Cursor.png"), default;	
 }
 
 
 .title{
-	font-family: Pacifico;
+	font-family: Jost;
 	font-size: 72px;
 
   color: #ff2400;
@@ -52,29 +62,6 @@ background-size: 10vh;
 
 
 
-hr {
-
-	margin-left: 0px;
-	margin-right: 0px;
-	width: 100vh;
-	background-repeat: repeat-x;
-	width: 1300px;
-
-	margin-left: 6px;
-	margin-right: 2px;
-	border-radius: 6px;
-	border-top: 6px solid;
-	border-left: none;
-	border-right: none;
-	border-bottom: none;
-	display: block;
-	margin-top:10px;
-
-
-	overflow-x: visible;
-    color: #fff; 
-    background-color: none;
-}
 
 
 
@@ -84,18 +71,21 @@ header {
 /* 	background: #55d6aa;
 	min-width: 1440px;
 	margin: 0px; */
-	margin: 0px;
-
-	height: 100px;
-
+	margin-left: 3px;
+	margin-right: 3px;
+	height: 120px;
 	
+	
+
+	position: relative;
 }
 
+
+
+
 header::after {
-	content: '';
-	display: table;
-	clear: both;
-	min-width: 1440px;
+	height: 120px;
+	background:#fff;
 
 }
 
@@ -107,6 +97,7 @@ header::after {
 
 .logo {
 	font-family: Pacifico;
+	position: inline-block;
 	font-size: 72px;
 	background-color: #f3ec78;
     background-image: linear-gradient(rgba(0,0,255,0.7) 0%, rgba(230,0,255,1) 100%);
@@ -115,13 +106,14 @@ header::after {
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
+		  animation: pulsate 0.11s ease-in-out infinite alternate; 
 	  text-shadow:
-	
+  
 
-    0 0 40px #f0584d;
-    0 0 20px #f0584d;
-	0 0 20px #f0584d;
-	0 0 28px #f0584d;
+    0 0 20px #f0584e;
+    0 0 30px #f0584e;
+	0 040px #f0584e;
+	0 0 40px #f0584e;
 	
 
 
@@ -141,7 +133,7 @@ header::after {
 
 nav {
 	
-	
+	cursor: url("Cursor.png"), default;	
 /* 	display: inline-block;
 	white-space: nowrap;
 	margin-bottom: 50px;
@@ -151,20 +143,21 @@ nav {
 	white-space: nowrap;
 	display: inline-block;
 	text-align: right; */
-	white-space: no-wrap;
 
-	
+	letter-spacing: 4px;
+	position: relative;
+		min-width: 20px;
 }
 
 
 nav ul {
 font-family: Jost;
-
-	min-width: 1500px;
-	margin-top: 50px;
+cursor: url("Cursor.png"), default;	
+	min-width: 1000px;
+		left: 450px;
 	position: absolute;
-	left: 450px;
 
+	margin-top: 70px;
 
 
 	font-family: Jost;
@@ -173,78 +166,123 @@ font-family: Jost;
 
 }
 
-nav li {
+
+
+
+
+
+
+
+
+nav li{
+	cursor: url("Cursor.png"), default;	
 	display: inline-block;
-    position: relative;
+ 	margin-right: 20px;
+	
+   transform: translateY(-0.25em);	
 
-    padding: 5px 25px;
-    border: none;
-   background-position: 0 0;
-
-
-
+	transition: 0.25s;
 }
 
-nav li:before {
-background: none;
+
+
+
+
+nav li:hover{
+cursor: url("Cursor.png"), default;	
+  transform: translateY(0.25em);	
+  transition: 0.25s;
 	
 }
 
 
-nav li:hover {
-	 color: #fff;
-background-position: 0 0;
-    background-image: linear-gradient(rgba(248,127,115,0.7) 0%, rgba(248,127,115,1) 100%);
-    -webkit-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    transition: all .5s ease;
+
+nav li a {
+	cursor: url("Cursor.png"), default;	
+    color:white;
+		text-decoration: none;
+}
+
+nav li a:hover {
+	cursor: url("Cursor.png"), default;	
+    color:red;
+	transition: 0.8s;
 }
 
 
+/*---------------------------*/
+hr {
 
-nav li:hover:before {
-       width: 100%;
-    color: #fff;
-	background: none;
-background-position: 0 0;
-}
-
-
-
-
-
-nav a {
-	color: black;
-	text-decoration: none;
 
 	
 
+	
+
+	margin-left: 6px;
+	margin-right: 6px;
+	border-radius: 2px;
+	border-top: 2px solid;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+
+	
+
+
+    color: #fff; 
+    background-color: none;
+	position: relative;
+	top: 120px;
+	
+}
+
+ 
+@keyframes pulsate {
+  100% {
+    /* Larger blur radius */
+    text-shadow:
+      0 0 2px #e8b0c2,
+      0 0 5.5px #e8b0c2,
+      0 0 9.5px #e8b0c2,
+      0 0 20px #e83f74,
+      0 0 40px #e83f74,
+      0 0 45px #e83f74,
+      0 0 25px #e83f74,
+      0 0 37.5px #e83f74;
+  }
+ 0% {
+    /* A slightly smaller blur radius */
+    text-shadow:
+      0 0 2px #e8b0c2,
+      0 0 5px #e8b0c2,
+      0 0 9px #e8b0c2,
+      0 0 19px #e83f74,
+      0 0 36.5px #e83f74,
+      0 0 50px #e83f74,
+      0 0 24px #e83f74,
+      0 0 37px #e83f74;
+  }
 }
 
 
-nav a:hover:before {
-
-	color: black;
+h1 {
+font-family: Jost;	
+font-weight: normal;
+margin-left: 6px;
+text-align: center;
+color: pink;
+text-transform: uppercase;
+letter-spacing: 4px;
 }
 
 
-nav a:hover {
-
-	color: black;
+.border{
+border-top: 6px solid;	
+	
 }
-
-
-
-
-
-
-
-
-
-
 
 /*http://jsfiddle.net/187wghru/*/
 
 
 
-
+/* https://codepen.io/giana/pen/BZaGyP */
