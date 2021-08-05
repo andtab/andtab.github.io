@@ -15,9 +15,10 @@
 background: linear-gradient(rgba(0,0,255,0.7) 0%, rgba(230,0,255,1) 80%);
 background-repeat: repeat-x;
 margin: 0; 
-background-size: 100vh;
-min-height: 100vh;
-
+background-size: 100%;
+min-height: 100%;
+mid-width: 100%;
+position: fixed;
 overflow: hidden;
 }
 
