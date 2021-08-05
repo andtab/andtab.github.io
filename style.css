@@ -3,10 +3,10 @@
   src: url("Pacifico-Regular.ttf");
 }
 
-/* @font-face {
+@font-face {
   font-family: Jost;
   src: url("Jost-VariableFont_wght.ttf");
-} */
+}
 
 
 
@@ -32,8 +32,9 @@ background: url("Image1_Animated_Alpha.gif"),
 
 black;
 
-min-height: 100vh;
-background-size: 10vh;
+min-height: 100%;
+min-width: 100%;
+background-size: 5%;
 cursor: url("Cursor.png"), default;	
 
 
