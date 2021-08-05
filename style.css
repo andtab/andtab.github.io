@@ -9,18 +9,36 @@
 }
 
 
+
+.gradient {
+	
+background: linear-gradient(rgba(0,0,255,0.7) 0%, rgba(230,0,255,1) 80%);
+background-repeat: repeat-x;
+margin: 0; 
+background-size: 100vh;
+min-height: 100vh;
+
+overflow: hidden;
+}
+
+
+
+
 body{
 	
 	
-background: linear-gradient(rgba(0,0,255,0.7) 0%, rgba(230,0,255,1) 80%) repeat-x;
-min-height: 100vh;
+background: url("Image1_Animated_Alpha.gif"),
 
+black;
+
+min-height: 100vh;
+background-size: 10vh;
 cursor: url("Cursor.png"), default;	
 
 
 margin: 0; 
 height: 100%; 
-overflow: hidden
+overflow: hidden;
 
 }
 
