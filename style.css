@@ -17,7 +17,7 @@ background-repeat: repeat-x;
 margin: 0; 
 background-size: 100%;
 min-height: 100%;
-mid-width: 100%;
+min-width: 100%;
 position: fixed;
 overflow: hidden;
 }
