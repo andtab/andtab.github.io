@@ -1,29 +1,12 @@
-@font-face {
-  font-family: Pacifico;
-  src: url("Pacifico-Regular.ttf");
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+
+:root {
+  --background: none;
 }
 
-@font-face {
-  font-family: Jost;
-  src: url("Jost-VariableFont_wght.ttf");
+*, *::before, *::after {
+  box-sizing: border-box;
 }
-
-
-
-/* .gradient {
-	
-background: linear-gradient(rgba(0,0,255,0.7) 0%, rgba(230,0,255,1) 80%);
-background-repeat: repeat-x;
-margin: 0; 
-background-size: 100%;
-min-height: 100%;
-min-width: 100%;
-position: fixed;
-overflow: hidden;
-}
- */
-
-
 
 body{
 	
@@ -35,209 +18,161 @@ url("Image1_Animated_Alpha.gif"),
 black;
 
 background-size: 100%, 5%, 100%;
-overflow: hidden;
+overflow-x: hidden;
 
 }
 
-.test {
-cursor: url("Cursor.png"), default;	
-}
-
-
-.title{
-	font-family: Jost;
-	font-size: 72px;
-
-  color: #ff2400;
- 
-  text-shadow:
-
-    0 0 40px #f0584d;
-    0 0 20px #f0584d;
-	0 0 20px #f0584d;
-	0 0 28px #f0584d;
-
-   	margin: 0px;
-	padding: 0px;
-	/* float: left; */
-	/* white-space: nowrap; */
- 
+.content {
 
 }
 
-
-.gradient-text {
-    background-color: #f3ec78;
-    background-image: linear-gradient(rgba(0,0,255,0.7) 0%, rgba(230,0,255,1) 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
-	
-/* 	margin: 0px;
-	padding: 0px; */
-	
-	
-}
-
-
-
-
-
-
+/* navigation styles start here */
 
 header {
-	
-/* 	background: #55d6aa;
-	min-width: 1440px;
-	margin: 0px; */
-	margin-left: 3px;
-	margin-right: 3px;
-	height: 120px;
-	
-	
-
-	position: relative;
+  background: var(--background);
+  text-align: center;
+  position: relative;
+  z-index: 999;
+  margin: 0px;
+  width: 100%;
+ 
 }
 
-
-
-
-header::after {
-	height: 120px;
-	background:#fff;
-
+/* changed this from the tutorial video to
+   allow it to gain focus, making it tabbable */
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
 }
 
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(lightblue, .75);
+}
 
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 90%;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
 
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
 
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
 
-
-.logo {
-	font-family: Pacifico;
-	position: inline-block;
-	font-size: 72px;
-	background-color: #f3ec78;
-    background-image: linear-gradient(rgba(0,0,255,0.7) 0%, rgba(230,0,255,1) 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
-		  animation: pulsate 0.11s ease-in-out infinite alternate; 
-	  text-shadow:
-  
-
-    0 0 20px #f0584e;
-    0 0 30px #f0584e;
-	0 040px #f0584e;
-	0 0 40px #f0584e;
-	
-
-
-	display: inline-block;
-	margin-bottom: 10px;
-	white-space: nowrap;
-	position: absolute;
-	float: left;
-	
-	
-	margin-top: 0px;
-	padding-right: 100px;
-
-	
-	
+.nav-toggle-label span::after {
+  top: 7px;
 }
 
 nav {
-	
-	cursor: url("Cursor.png"), default;	
-/* 	display: inline-block;
-	white-space: nowrap;
-	margin-bottom: 50px;
-	text-align: right; */
-	
-/* 
-	white-space: nowrap;
-	display: inline-block;
-	text-align: right; */
+  font-family: Jost;
+  letter-spacing: 4px;
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  margin-right: -12px;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
 
-	letter-spacing: 4px;
-	position: relative;
-		min-width: 20px;
+
+
 }
-
 
 nav ul {
-font-family: Jost;
-cursor: url("Cursor.png"), default;	
-	min-width: 1000px;
-		left: 450px;
-	position: absolute;
 
-	margin-top: 70px;
+  
+  list-style: none;
+
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+  transform: translateY(-0.25em);	
+  transition: 0.25s;	
+  margin-top: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+  
+
+nav a:hover {
+  color: red;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
 
 
-	font-family: Jost;
+.logo{ 
+
+    left:0%;
+font-size: 48px;
+	font-family: Pacifico;
+	color: rgba(232, 26, 71, 1);
+    background-size: 100%;
+  padding-left: 6px;
+  margin: 0px;
+
+  text-align: left;
+    text-shadow:
+      0 0 2px #e8b0c2,
+      0 0 5.5px #e8b0c2,
+      0 0 9.5px #e8b0c2,
+      0 0 20px #e83f74,
+      0 0 40px #e83f74,
+      0 0 45px #e83f74,
+      0 0 25px #e83f74,
+      0 0 37.5px #e83f74;
+
+ 
+}
+
+.container{
+
+  margin: 0px;
 	
-
-
-}
-
-
-
-
-
-
-
-
-
-nav li{
-	cursor: url("Cursor.png"), default;	
-	display: inline-block;
- 	margin-right: 20px;
-	
-   transform: translateY(-0.25em);	
-
-	transition: 0.25s;
-}
-
-
-
-
-
-nav li:hover{
-cursor: url("Cursor.png"), default;	
-  transform: translateY(0.25em);	
-  transition: 0.25s;
 	
 }
 
-
-
-nav li a {
-	cursor: url("Cursor.png"), default;	
-    color:white;
-		text-decoration: none;
-}
-
-nav li a:hover {
-	cursor: url("Cursor.png"), default;	
-    color:red;
-	transition: 0.8s;
-}
-
-
-/*---------------------------*/
 hr {
-
-
-	
-
-	
 
 	margin-left: 6px;
 	margin-right: 6px;
@@ -249,18 +184,35 @@ hr {
 
 	
 
-
+	bottom:10px;
     color: #fff; 
     background-color: none;
 	position: relative;
-	top: 120px;
+
 	
 }
 
- 
-@keyframes pulsate {
-  100% {
-    /* Larger blur radius */
+
+
+@media screen and (min-width: 1250px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+
+  }
+  
+  .logo {
+    left:0%;
+	font-size: 72px;
+  padding-left: 6px;
+		color: rgba(232, 26, 71, 1);
+    background-size: 100%;
+	display: inline-block;
+	white-space: nowrap;
     text-shadow:
       0 0 2px #e8b0c2,
       0 0 5.5px #e8b0c2,
@@ -271,20 +223,72 @@ hr {
       0 0 25px #e83f74,
       0 0 37.5px #e83f74;
   }
- 0% {
-    /* A slightly smaller blur radius */
-    text-shadow:
-      0 0 2px #e8b0c2,
-      0 0 5px #e8b0c2,
-      0 0 9px #e8b0c2,
-      0 0 19px #e83f74,
-      0 0 36.5px #e83f74,
-      0 0 50px #e83f74,
-      0 0 24px #e83f74,
-      0 0 37px #e83f74;
+  
+  nav {
+    // all: unset; /* this causes issues with Edge, since it's unsupported */
+    
+    /* the following lines are not from my video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: 120px;
+    /* end Edge support stuff */
+    
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+	  margin-left: 100px;
+  }
+  
+  nav ul {
+
+    display: flex;
+
+  }
+  
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+	white-space: nowrap;
+  }
+  
+  nav a {
+    opacity: 1;
+    position: relative;
+	
+  }
+  
+  nav li::before {
+    content: '';
+    display: block;
+    height: 2px;
+    background: red;
+    position: relative;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+  
+  nav li:hover::before {
+    transform: scale(1,1);
+	
   }
 }
 
+
+
+nav li:hover{
+  color: red;
+  transform: translateY(0.25em);	
+  transition: 0.25s;	
+	
+}
 
 h1 {
 font-family: Jost;	
@@ -294,16 +298,33 @@ text-align: center;
 color: pink;
 text-transform: uppercase;
 letter-spacing: 4px;
+position: relative
+
 }
 
+h1:before {
+	text-align: center;
+	content: attr(data-text);
+	position: absolute;
+	
 
-.border{
-border-top: 6px solid;	
+	text-align: center;
+	transform-origin: bottom;
+	transform: rotateX(180deg) translateY(0.6em);
+	background: linear-gradient(0deg, #fff 0, transparent 80%);
+	-webkit-background-clip: text;
+	color: transparent;
+	opacity: 0.5;
 	
 }
 
-/*http://jsfiddle.net/187wghru/*/
+p{
+font-family: Jost;
+text-align: center;	
+
+color: white;
+letter-spacing: 2px;
+	
+}
 
 
-
-/* https://codepen.io/giana/pen/BZaGyP */
