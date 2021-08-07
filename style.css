@@ -377,14 +377,32 @@ width: 100%;
 background: rgba(0,0,0,0.8);
 text-align: center;
 margin: auto;
-padding-top: 0.2%;
+padding-top: 0.5%;
 padding-bottom: 2%;
 bottom: 0px;
 display: inline-block;
 color: white;
-font-size: 2vw;
+font-size: 2.5vh;
 font-family: Jost;
 }
 
+@media (min-aspect-ratio: 3/1) {
+.copyright{
+bottom: 0;
+position: fixed;
+height: 6%;
+width: 100%;
+background: rgba(0,0,0,0.8);
+text-align: center;
+margin: auto;
+padding-top: 0.5%;
+padding-bottom: 2%;
+bottom: 0px;
+display: inline-block;
+color: white;
+font-size: 2.5vh;
+font-family: Jost;
+  }
+}
 
 
